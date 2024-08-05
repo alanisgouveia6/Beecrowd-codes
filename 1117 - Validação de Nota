@@ -1,0 +1,36 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        double nota1 = 0, nota2 = 0;
+        int contadorNotasValidas = 0;
+
+        while (contadorNotasValidas < 2)
+        {
+            double nota = double.Parse(Console.ReadLine());
+
+            if (nota < 0 || nota > 10)
+            {
+                Console.WriteLine("nota invalida");
+            }
+            else
+            {
+                if (contadorNotasValidas == 0)
+                {
+                    nota1 = nota;
+                }
+                else
+                {
+                    nota2 = nota;
+                }
+
+                contadorNotasValidas++;
+            }
+        }
+
+        double media = (nota1 + nota2) / 2;
+        Console.WriteLine($"media = {media.ToString("F2")}");
+    }
+}
