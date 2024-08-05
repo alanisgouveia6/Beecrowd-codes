@@ -1,0 +1,25 @@
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        int somaIdades = 0;
+        int quantidadeIndividuos = 0;
+        
+        while (true) {
+            int idade = int.Parse(Console.ReadLine());
+            
+            if (idade < 0) {
+                break; // Encerra o loop se a idade for negativa
+            }
+            
+            somaIdades += idade;
+            quantidadeIndividuos++;
+        }
+        
+        // Calcula a média das idades
+        double mediaIdades = (double)somaIdades / quantidadeIndividuos;
+        
+        // Imprime a média com duas casas 
+        Console.WriteLine(mediaIdades.ToString("F2"));
+    }
+}
