@@ -1,0 +1,19 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Leitura do valor de N
+        int N = int.Parse(Console.ReadLine());
+        
+        // Laço para gerar e imprimir as linhas de saída
+        for (int i = 1; i <= N; i++)
+        {
+            // Linha ímpar
+            Console.WriteLine($"{i} {i * i} {i * i * i}");
+            // Linha par
+            Console.WriteLine($"{i} {i * i + 1} {i * i * i + 1}");
+        }
+    }
+}
