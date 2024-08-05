@@ -1,0 +1,25 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Declarando variável para contar os valores positivos
+        int quantidadePositivos = 0;
+
+        // Loop para ler os seis valores
+        for (int i = 0; i < 6; i++)
+        {
+            double valor = double.Parse(Console.ReadLine());
+
+            // Verifica se o valor é positivo
+            if (valor > 0)
+            {
+                quantidadePositivos++;
+            }
+        }
+
+        // Imprime a quantidade de valores positivos encontrados
+        Console.WriteLine(quantidadePositivos + " valores positivos");
+    }
+}
