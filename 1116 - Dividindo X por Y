@@ -1,0 +1,33 @@
+using System;
+using System.Globalization;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Leitura da quantidade de pares de valores
+        int N = int.Parse(Console.ReadLine());
+
+        for (int i = 0; i < N; i++)
+        {
+            // Leitura dos valores X e Y
+            string[] valores = Console.ReadLine().Split(' ');
+            int X = int.Parse(valores[0]);
+            int Y = int.Parse(valores[1]);
+
+            // Verificar se Y é zero para evitar divisão por zero
+            if (Y == 0)
+            {
+                Console.WriteLine("divisao impossivel");
+            }
+            else
+            {
+                // Realizar a divisão de X por Y
+                double resultado = (double)X / Y;
+
+                // Imprimir o resultado com um dígito após o ponto decimal
+                Console.WriteLine(resultado.ToString("F1", CultureInfo.InvariantCulture));
+            }
+        }
+    }
+}
