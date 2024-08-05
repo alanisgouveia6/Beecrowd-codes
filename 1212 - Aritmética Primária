@@ -1,0 +1,64 @@
+  using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        while (true)
+        {
+            // Leitura dos números
+            string[] input = Console.ReadLine().Split();
+            string num1 = input[0];
+            string num2 = input[1];
+
+            // Verifica condição de parada
+            if (num1 == "0" && num2 == "0")
+                break;
+
+            // Inverte as strings para facilitar a adição da direita para a esquerda
+            char[] arr1 = num1.ToCharArray();
+            char[] arr2 = num2.ToCharArray();
+            Array.Reverse(arr1);
+            Array.Reverse(arr2);
+
+            int len1 = arr1.Length;
+            int len2 = arr2.Length;
+
+            int carry = 0;
+            int carryOperations = 0;// Percorre os números adicionando da direita para a esquerda
+            int i = 0;
+            while (i < len1 || i < len2)
+            {
+                int digit1 = (i < len1) ? (arr1[i] - '0') : 0;
+                int digit2 = (i < len2) ? (arr2[i] - '0') : 0;
+
+                int sum = digit1 + digit2 + carry;
+                if (sum >= 10)
+                {
+                    carry = 1;
+                    carryOperations++;
+                }
+                else
+                {
+                    carry = 0;
+                }
+
+                i++;
+            }
+
+            // Prepara a mensagem de saída conforme especificado
+            if (carryOperations == 0)
+            {
+                Console.WriteLine("No carry operation.");
+            }
+            else if (carryOperations == 1)
+            {
+                Console.WriteLine("1 carry operation.");
+            }
+            else
+            {
+                Console.WriteLine($"{carryOperations} carry operations.");
+            }
+        }
+    }
+}
