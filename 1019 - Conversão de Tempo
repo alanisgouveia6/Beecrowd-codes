@@ -1,0 +1,18 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Leitura do valor de entrada
+        int totalSegundos = int.Parse(Console.ReadLine());
+
+        // Cálculo das horas, minutos e segundos
+        int horas = totalSegundos / 3600;
+        int minutos = (totalSegundos % 3600) / 60;
+        int segundos = totalSegundos % 60;
+
+        // Impressão do resultado no formato horas:minutos:segundos
+        Console.WriteLine($"{horas}:{minutos}:{segundos}");
+    }
+}
