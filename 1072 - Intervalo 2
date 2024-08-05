@@ -1,0 +1,29 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int N = int.Parse(Console.ReadLine()); // Lê  número de casos de teste
+
+        int dentroIntervalo = 0;
+        int foraIntervalo = 0;
+
+        for (int i = 0; i < N; i++)
+        {
+            int X = int.Parse(Console.ReadLine()); // Lê cd valor X
+
+            if (X >= 10 && X <= 20)
+            {
+                dentroIntervalo++;
+            }
+            else
+            {
+                foraIntervalo++;
+            }
+        }
+
+        Console.WriteLine($"{dentroIntervalo} in");
+        Console.WriteLine($"{foraIntervalo} out");
+    }
+}
