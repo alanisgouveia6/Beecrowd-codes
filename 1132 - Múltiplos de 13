@@ -1,0 +1,31 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Leitura dos valores X e Y
+        int X = int.Parse(Console.ReadLine());
+        int Y = int.Parse(Console.ReadLine());
+
+      
+        int menor = Math.Min(X, Y);
+        int maior = Math.Max(X, Y);
+
+        
+        int soma = 0;
+
+        // Iteração de menor até maior
+        for (int i = menor; i <= maior; i++)
+        {
+   
+            if (i % 13 != 0)
+            {
+                soma += i;
+            }
+        }
+
+        // Imprime soma dos números não múltiplos de 13
+        Console.WriteLine(soma);
+    }
+}
