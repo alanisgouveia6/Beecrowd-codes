@@ -1,0 +1,19 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Leitura dos quatro valores inteiros
+        int A = int.Parse(Console.ReadLine());
+        int B = int.Parse(Console.ReadLine());
+        int C = int.Parse(Console.ReadLine());
+        int D = int.Parse(Console.ReadLine());
+
+        // Cálculo  diferença
+        int diferenca = (A * B) - (C * D);
+
+        // Impressão formatada do resultado
+        Console.WriteLine($"DIFERENCA = {diferenca}");
+    }
+}
