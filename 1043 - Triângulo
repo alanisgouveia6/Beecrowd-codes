@@ -1,0 +1,36 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Leitura dos três valores reais A, B e C
+        string[] valores = Console.ReadLine().Split();
+        double A = double.Parse(valores[0]);
+        double B = double.Parse(valores[1]);
+        double C = double.Parse(valores[2]);
+
+        if (FormaTriangulo(A, B, C))
+        {
+            // Calcula o perímetro do triângulo
+            double Perimetro = A + B + C;
+            Console.WriteLine($"Perimetro = {Perimetro.ToString("F1")}");
+        }
+        else
+        {
+            // Calcula a área do trapézio
+            double Area = ((A + B) * C) / 2;
+            Console.WriteLine($"Area = {Area.ToString("F1")}");
+        }
+    }
+
+    // Função para verificar se os três valores formam um triângulo
+    static bool FormaTriangulo(double A, double B, double C)
+    {
+        if (A + B > C && A + C > B && B + C > A)
+        {
+            return true;
+        }
+        return false;
+    }
+}
