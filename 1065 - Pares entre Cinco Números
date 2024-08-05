@@ -1,0 +1,28 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int[] numeros = new int[5]; // Array para armazenar os 5 valores inteiros
+
+        // Leitura dos 5 valores inteiros
+        for (int i = 0; i < 5; i++)
+        {
+            numeros[i] = int.Parse(Console.ReadLine());
+        }
+
+        // Contagem de valores pares
+        int countPares = 0;
+        foreach (int num in numeros)
+        {
+            if (num % 2 == 0)
+            {
+                countPares++;
+            }
+        }
+
+        // Impressão do resultado
+        Console.WriteLine($"{countPares} valores pares");
+    }
+}
