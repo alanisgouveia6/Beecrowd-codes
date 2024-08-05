@@ -1,0 +1,22 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Leitura das notas A e B
+        double A = double.Parse(Console.ReadLine());
+        double B = double.Parse(Console.ReadLine());
+
+        // Pesos das notas
+        double pesoA = 3.5;
+        double pesoB = 7.5;
+        double somaPesos = pesoA + pesoB;
+
+        // Cálculo da média ponderada
+        double media = (A * pesoA + B * pesoB) / somaPesos;
+
+        // Impressão do resultado conforme especificado
+        Console.WriteLine($"MEDIA = {media:F5}");
+    }
+}
