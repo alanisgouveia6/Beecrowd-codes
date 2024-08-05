@@ -1,0 +1,17 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+       
+        int X = int.Parse(Console.ReadLine());
+        double Y = double.Parse(Console.ReadLine());
+
+       
+        double consumo_medio = X / Y;
+
+        // Impressão do resultado formatado
+        Console.WriteLine($"{consumo_medio:F3} km/l");
+    }
+}
